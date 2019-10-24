@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+class BasePresenter
+//<T>
+{
+//    var mvpView: T?
+    var context: RouteContext?
+
+//    func attachView(mvpView: T) {
+//        self.mvpView = mvpView
+//    }
+
+    func setContext(to context: RouteContext?) {
+        self.context = context
+    }
+
+//    func detachView() {
+//        mvpView = nil
+//    }
+}

@@ -7,3 +7,38 @@
 //
 
 import Foundation
+
+struct Teams {
+    let list: [Team]
+}
+
+extension Teams: Decodable {
+    private enum CodingKeys: String, CodingKey {
+        case teams = "teams"
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        self.list = try container.decode([Team].self, forKey: .teams)
+    }
+}
+
+struct Team {
+    let name: String
+    let logoURL: String
+}
+
+extension Team: Decodable {
+    private enum CodingKeys: String, CodingKey {
+        case name = "strTeam"
+        case logoURL = "strTeamBadge"
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        self.name = try container.decode(String.self, forKey: .name)
+        self.logoURL = try container.decode(String.self, forKey: .logoURL)
+    }
+}

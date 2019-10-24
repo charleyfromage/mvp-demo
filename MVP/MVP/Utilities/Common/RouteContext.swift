@@ -6,4 +6,18 @@
 //  Copyright © 2019 Voodoo Coding. All rights reserved.
 //
 
-import Foundation
+protocol RoutableScreen {
+    var context: RouteContext? { get set }
+}
+
+struct RouteContext {
+    private let parameters: [String: Any]
+
+    init(with parameters: [String: Any]) {
+        self.parameters = parameters
+    }
+
+    subscript<T>(key: String) -> T? {
+        return parameters[key] as? T
+    }
+}

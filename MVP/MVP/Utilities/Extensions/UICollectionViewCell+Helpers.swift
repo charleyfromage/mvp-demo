@@ -6,4 +6,10 @@
 //  Copyright © 2019 Voodoo Coding. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UICollectionViewCell {
+    static var identifier: String {
+        return nameOfClass
+    }
+}
