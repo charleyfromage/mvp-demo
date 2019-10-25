@@ -28,6 +28,11 @@
 		B2C1850823620F190043DE50 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C1850623620F190043DE50 /* TeamCell.xib */; };
 		B2C1850B23620F3D0043DE50 /* UICollectionViewCell+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1850A23620F3D0043DE50 /* UICollectionViewCell+Helpers.swift */; };
 		B2C1850D23620FA60043DE50 /* NSObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1850C23620FA60043DE50 /* NSObject+Helpers.swift */; };
+		B2C18511236328D90043DE50 /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C18510236328D90043DE50 /* TeamDetailsViewController.swift */; };
+		B2C18513236329090043DE50 /* TeamDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C18512236329090043DE50 /* TeamDetailsPresenter.swift */; };
+		B2C1851523632BAE0043DE50 /* TeamsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1851423632BAE0043DE50 /* TeamsListView.swift */; };
+		B2C1851723632BD30043DE50 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1851623632BD30043DE50 /* BaseView.swift */; };
+		B2C1851923632C340043DE50 /* TeamDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1851823632C340043DE50 /* TeamDetailsView.swift */; };
 		F0442FE51E58DAE50FFCB102 /* Pods_MVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7C50E3F9F5CBACE4114EAB /* Pods_MVP.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +63,11 @@
 		B2C1850623620F190043DE50 /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
 		B2C1850A23620F3D0043DE50 /* UICollectionViewCell+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Helpers.swift"; sourceTree = "<group>"; };
 		B2C1850C23620FA60043DE50 /* NSObject+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Helpers.swift"; sourceTree = "<group>"; };
+		B2C18510236328D90043DE50 /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
+		B2C18512236329090043DE50 /* TeamDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsPresenter.swift; sourceTree = "<group>"; };
+		B2C1851423632BAE0043DE50 /* TeamsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListView.swift; sourceTree = "<group>"; };
+		B2C1851623632BD30043DE50 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		B2C1851823632C340043DE50 /* TeamDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +161,7 @@
 		B21923BF2361FC35006C221F /* TeamsList */ = {
 			isa = PBXGroup;
 			children = (
+				B2C1851423632BAE0043DE50 /* TeamsListView.swift */,
 				B21923C12361FC5F006C221F /* TeamsListViewController.swift */,
 				B21923D42362049C006C221F /* TeamsListCollectionViewFlowLayout.swift */,
 				B21923C32361FC73006C221F /* TeamsListPresenter.swift */,
@@ -162,6 +173,9 @@
 		B21923C02361FC3E006C221F /* TeamDetails */ = {
 			isa = PBXGroup;
 			children = (
+				B2C1851823632C340043DE50 /* TeamDetailsView.swift */,
+				B2C18510236328D90043DE50 /* TeamDetailsViewController.swift */,
+				B2C18512236329090043DE50 /* TeamDetailsPresenter.swift */,
 			);
 			path = TeamDetails;
 			sourceTree = "<group>";
@@ -169,8 +183,9 @@
 		B21923C62361FF92006C221F /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				B21923C92361FFB0006C221F /* BasePresenter.swift */,
+				B2C1851623632BD30043DE50 /* BaseView.swift */,
 				B21923C72361FFA7006C221F /* BaseViewController.swift */,
+				B21923C92361FFB0006C221F /* BasePresenter.swift */,
 				B21923CD23620106006C221F /* RouteContext.swift */,
 				B21923CB23620038006C221F /* Router.swift */,
 			);
@@ -348,14 +363,19 @@
 				B21923BC2361F890006C221F /* Team.swift in Sources */,
 				B21923C42361FC73006C221F /* TeamsListPresenter.swift in Sources */,
 				B21923CC23620038006C221F /* Router.swift in Sources */,
+				B2C1851723632BD30043DE50 /* BaseView.swift in Sources */,
 				B2C1850D23620FA60043DE50 /* NSObject+Helpers.swift in Sources */,
 				B219239D2361F03A006C221F /* AppDelegate.swift in Sources */,
 				B21923C82361FFA7006C221F /* BaseViewController.swift in Sources */,
+				B2C18513236329090043DE50 /* TeamDetailsPresenter.swift in Sources */,
+				B2C1851523632BAE0043DE50 /* TeamsListView.swift in Sources */,
 				B21923B42361F20C006C221F /* SportDBService.swift in Sources */,
 				B21923C22361FC5F006C221F /* TeamsListViewController.swift in Sources */,
+				B2C1851923632C340043DE50 /* TeamDetailsView.swift in Sources */,
 				B219239F2361F03A006C221F /* SceneDelegate.swift in Sources */,
 				B21923B92361F2EC006C221F /* Constants.swift in Sources */,
 				B21923CE23620106006C221F /* RouteContext.swift in Sources */,
+				B2C18511236328D90043DE50 /* TeamDetailsViewController.swift in Sources */,
 				B21923CA2361FFB0006C221F /* BasePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,17 +8,9 @@
 
 import Foundation
 
-class TeamsListPresenter: BasePresenter
-//<NewspapersMvpView>
-{
+class TeamsListPresenter: BasePresenter<TeamsListView> {
     var teams = [Team]()
     private let service = SportDBService()
-
-//    func selectedCell(withRow: Int) {
-//        let parameters = [NewspaperDetailVC.ArgNewspaperDetailUrl: newspapersList[withRow].url, NewspaperDetailVC.ArgNewspaperDetailTitle: newspapersList[withRow].title]
-//        let context = RouteContext(parameters)
-//        mvpView?.openChildScreen(.newspaperDetail, fromStoryboard: .main, withContext: context)
-//    }
 
     func fetchTeams(for country: String?, completion: @escaping () -> Void) {
         guard let country = country, country != "" else {
@@ -35,5 +27,13 @@ class TeamsListPresenter: BasePresenter
 
             completion()
         }
+    }
+
+    func cellSelected(for row: Int) {
+        let selectedTeam = teams[row]
+
+        let parameters = [TeamDetailsPresenter.teamKey: selectedTeam]
+        let context = RouteContext(with: parameters)
+        view?.openChildScreen(.teamDetailsView, fromStoryboard: .main, withContext: context)
     }
 }

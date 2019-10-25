@@ -33,7 +33,7 @@ class Router {
         }
     }
 
-    func backToPrevScreen(with context: RouteContext? = nil) {
+    func backToPreviousScreen(with context: RouteContext? = nil) {
         if let stackScreensCount = currentController.navigationController?.viewControllers.count,
            var prevRoutableController = currentController.navigationController?.viewControllers[stackScreensCount-2] as? RoutableScreen {
             prevRoutableController.context = context

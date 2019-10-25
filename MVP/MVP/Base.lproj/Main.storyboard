@@ -27,7 +27,7 @@
         <scene sceneID="90I-q7-qaj">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBY-V1-nw2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="csj-QZ-qsL" customClass="TeamsListViewController" customModule="MVP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeamsListView" id="csj-QZ-qsL" customClass="TeamsListViewController" customModule="MVP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mzC-Ru-ExL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +71,22 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1" y="-38"/>
+        </scene>
+        <!--Team Details View Controller-->
+        <scene sceneID="kiL-il-YF5">
+            <objects>
+                <viewController storyboardIdentifier="TeamDetailsView" id="Klq-0L-ebm" customClass="TeamDetailsViewController" customModule="MVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3jZ-ay-74h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="TDh-23-BIZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OPG-7Q-TRQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bxt-u6-lQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="843" y="-38"/>
         </scene>
     </scenes>
 </document>

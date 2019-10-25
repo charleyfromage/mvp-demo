@@ -19,7 +19,11 @@ enum Constants {
     }
 
     enum Scenes: String {
-        case teamsList = "NewspapersList"
-        case teamDetails = "NewspapersDetail"
+        case teamsListView = "TeamsListView"
+        case teamDetailsView = "TeamDetailsView"
+    }
+
+    enum Segues {
+        static let showTeamDetails = "showTeamDetails"
     }
 }

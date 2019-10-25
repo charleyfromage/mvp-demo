@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TeamsListViewController: BaseViewController<TeamsListPresenter> {
+class TeamsListViewController: BaseViewController<TeamsListPresenter>, TeamsListView {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -28,8 +28,25 @@ class TeamsListViewController: BaseViewController<TeamsListPresenter> {
 
     override func initPresenter(with context: RouteContext?) {
         presenter = TeamsListPresenter()
+        presenter?.attachView(view: self)
         presenter?.setContext(to: context)
     }
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        switch segue.identifier {
+//            case Constants.Segues.showTeamDetails:
+//                if let teamDetailsViewController = segue.destination as? TeamDetailsViewController {
+//                    teamDetailsViewController.presenter?.team = presenter?.selectedTeam
+//                }
+//
+//            default: break
+//        }
+//
+////        if segue.destination is TertiaryViewController {
+////               let vc = segue.destination as? TertiaryViewController
+////               vc?.username = "Arthur Dent"
+////           }
+//    }
 }
 
 extension TeamsListViewController: UICollectionViewDataSource {
@@ -51,7 +68,9 @@ extension TeamsListViewController: UICollectionViewDataSource {
 }
 
 extension TeamsListViewController: UICollectionViewDelegate {
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.cellSelected(for: indexPath.row)
+    }
 }
 
 extension TeamsListViewController: UISearchBarDelegate {
