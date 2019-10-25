@@ -25,12 +25,14 @@ extension Teams: Decodable {
 }
 
 struct Team {
+    let id: String
     let name: String
     let logoURL: String
 }
 
 extension Team: Decodable {
     private enum CodingKeys: String, CodingKey {
+        case id = "idTeam"
         case name = "strTeam"
         case logoURL = "strTeamBadge"
     }
@@ -38,6 +40,7 @@ extension Team: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
+        self.id = try container.decode(String.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
         self.logoURL = try container.decode(String.self, forKey: .logoURL)
     }

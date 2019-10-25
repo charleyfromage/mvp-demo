@@ -33,6 +33,10 @@
 		B2C1851523632BAE0043DE50 /* TeamsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1851423632BAE0043DE50 /* TeamsListView.swift */; };
 		B2C1851723632BD30043DE50 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1851623632BD30043DE50 /* BaseView.swift */; };
 		B2C1851923632C340043DE50 /* TeamDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1851823632C340043DE50 /* TeamDetailsView.swift */; };
+		B2C1851D236334610043DE50 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1851B236334610043DE50 /* PlayerCell.swift */; };
+		B2C1851E236334610043DE50 /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C1851C236334610043DE50 /* PlayerCell.xib */; };
+		B2C18520236334750043DE50 /* UITableViewCell+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1851F236334750043DE50 /* UITableViewCell+Helpers.swift */; };
+		B2C185222363351C0043DE50 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C185212363351C0043DE50 /* Player.swift */; };
 		F0442FE51E58DAE50FFCB102 /* Pods_MVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7C50E3F9F5CBACE4114EAB /* Pods_MVP.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +72,10 @@
 		B2C1851423632BAE0043DE50 /* TeamsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListView.swift; sourceTree = "<group>"; };
 		B2C1851623632BD30043DE50 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B2C1851823632C340043DE50 /* TeamDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsView.swift; sourceTree = "<group>"; };
+		B2C1851B236334610043DE50 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		B2C1851C236334610043DE50 /* PlayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCell.xib; sourceTree = "<group>"; };
+		B2C1851F236334750043DE50 /* UITableViewCell+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Helpers.swift"; sourceTree = "<group>"; };
+		B2C185212363351C0043DE50 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				B21923BB2361F890006C221F /* Team.swift */,
+				B2C185212363351C0043DE50 /* Player.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,6 +185,7 @@
 				B2C1851823632C340043DE50 /* TeamDetailsView.swift */,
 				B2C18510236328D90043DE50 /* TeamDetailsViewController.swift */,
 				B2C18512236329090043DE50 /* TeamDetailsPresenter.swift */,
+				B2C1851A236334430043DE50 /* Cells */,
 			);
 			path = TeamDetails;
 			sourceTree = "<group>";
@@ -204,6 +214,7 @@
 		B2C1850923620F2C0043DE50 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B2C1851F236334750043DE50 /* UITableViewCell+Helpers.swift */,
 				B2C1850A23620F3D0043DE50 /* UICollectionViewCell+Helpers.swift */,
 				B2C1850C23620FA60043DE50 /* NSObject+Helpers.swift */,
 			);
@@ -228,6 +239,15 @@
 				B21923A52361F03B006C221F /* Assets.xcassets */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		B2C1851A236334430043DE50 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B2C1851C236334610043DE50 /* PlayerCell.xib */,
+				B2C1851B236334610043DE50 /* PlayerCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		BFD229CA7BDA94BCD9576F17 /* Pods */ = {
@@ -299,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C1851E236334610043DE50 /* PlayerCell.xib in Resources */,
 				B21923A92361F03B006C221F /* LaunchScreen.storyboard in Resources */,
 				B2C1850823620F190043DE50 /* TeamCell.xib in Resources */,
 				B21923A62361F03B006C221F /* Assets.xcassets in Resources */,
@@ -360,6 +381,7 @@
 				B21923D52362049C006C221F /* TeamsListCollectionViewFlowLayout.swift in Sources */,
 				B2C1850723620F190043DE50 /* TeamCell.swift in Sources */,
 				B21923B72361F237006C221F /* Configuration.swift in Sources */,
+				B2C185222363351C0043DE50 /* Player.swift in Sources */,
 				B21923BC2361F890006C221F /* Team.swift in Sources */,
 				B21923C42361FC73006C221F /* TeamsListPresenter.swift in Sources */,
 				B21923CC23620038006C221F /* Router.swift in Sources */,
@@ -368,10 +390,12 @@
 				B219239D2361F03A006C221F /* AppDelegate.swift in Sources */,
 				B21923C82361FFA7006C221F /* BaseViewController.swift in Sources */,
 				B2C18513236329090043DE50 /* TeamDetailsPresenter.swift in Sources */,
+				B2C18520236334750043DE50 /* UITableViewCell+Helpers.swift in Sources */,
 				B2C1851523632BAE0043DE50 /* TeamsListView.swift in Sources */,
 				B21923B42361F20C006C221F /* SportDBService.swift in Sources */,
 				B21923C22361FC5F006C221F /* TeamsListViewController.swift in Sources */,
 				B2C1851923632C340043DE50 /* TeamDetailsView.swift in Sources */,
+				B2C1851D236334610043DE50 /* PlayerCell.swift in Sources */,
 				B219239F2361F03A006C221F /* SceneDelegate.swift in Sources */,
 				B21923B92361F2EC006C221F /* Constants.swift in Sources */,
 				B21923CE23620106006C221F /* RouteContext.swift in Sources */,

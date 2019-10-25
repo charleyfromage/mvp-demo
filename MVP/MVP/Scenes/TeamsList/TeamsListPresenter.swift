@@ -12,11 +12,10 @@ class TeamsListPresenter: BasePresenter<TeamsListView> {
     var teams = [Team]()
     private let service = SportDBService()
 
-    func fetchTeams(for country: String?, completion: @escaping () -> Void) {
+    func fetchTeams(for country: String?) {
         guard let country = country, country != "" else {
             teams.removeAll()
-            completion()
-
+            view?.updateList()
             return
         }
 
@@ -24,8 +23,7 @@ class TeamsListPresenter: BasePresenter<TeamsListView> {
             guard let teams = teams else { return }
             
             self?.teams = teams.list
-
-            completion()
+            self?.view?.updateList()
         }
     }
 

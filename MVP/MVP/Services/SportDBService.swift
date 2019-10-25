@@ -28,4 +28,24 @@ class SportDBService {
             completion(entity, response.error)
         }
     }
+
+    func getPlayersList(for teamId: String, completion: @escaping (Players?, Error?) -> Void) {
+        let urlString = String(format: Constants.APIs.sportDBAPIBaseURL, Configuration.APIs.sportDBAPIKey) + String(format: Constants.APIs.sportDBAPISearchPlayersEndPoint, teamId)
+
+        Alamofire.request(urlString).responseJSON { response in
+            #if DEBUG
+            print("Result: \(response.result)")
+            #endif
+
+            guard let data = response.data, let entity: Players = try? JSONDecoder().decode(Players.self, from: data) else {
+                #if DEBUG
+                print("Error parsing \(Players.self)")
+                #endif
+
+                return
+            }
+
+            completion(entity, response.error)
+        }
+    }
 }

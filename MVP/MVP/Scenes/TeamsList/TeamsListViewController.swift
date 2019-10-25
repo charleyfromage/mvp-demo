@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TeamsListViewController: BaseViewController<TeamsListPresenter>, TeamsListView {
+class TeamsListViewController: BaseViewController<TeamsListPresenter> {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -75,10 +75,14 @@ extension TeamsListViewController: UICollectionViewDelegate {
 
 extension TeamsListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        presenter?.fetchTeams(for: searchBar.text) { [weak self] in
-            self?.collectionView.reloadData()
-        }
+        presenter?.fetchTeams(for: searchBar.text)
 
         searchBar.resignFirstResponder()
+    }
+}
+
+extension TeamsListViewController: TeamsListView {
+    func updateList() {
+        collectionView.reloadData()
     }
 }

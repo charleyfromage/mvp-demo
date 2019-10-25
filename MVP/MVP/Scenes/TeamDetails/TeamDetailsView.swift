@@ -9,5 +9,5 @@
 import Foundation
 
 protocol TeamDetailsView: BaseView {
-
+    func updateList()
 }

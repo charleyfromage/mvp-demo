@@ -10,6 +10,7 @@ enum Constants {
     enum APIs {
         static let sportDBAPIBaseURL = "https://www.thesportsdb.com/api/v1/json/%@/"
         static let sportDBAPISearchTeamsEndPoint = "search_all_teams.php?s=Soccer&c=%@"
+        static let sportDBAPISearchPlayersEndPoint = "lookup_all_players.php?id=%@"
     }
 
     enum Storyboards: String {

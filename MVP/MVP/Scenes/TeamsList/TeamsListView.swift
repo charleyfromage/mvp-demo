@@ -6,4 +6,6 @@
 //  Copyright © 2019 Voodoo Coding. All rights reserved.
 //
 
-protocol TeamsListView: BaseView {}
+protocol TeamsListView: BaseView {
+    func updateList()
+}
