@@ -31,22 +31,6 @@ class TeamsListViewController: BaseViewController<TeamsListPresenter> {
         presenter?.attachView(view: self)
         presenter?.setContext(to: context)
     }
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        switch segue.identifier {
-//            case Constants.Segues.showTeamDetails:
-//                if let teamDetailsViewController = segue.destination as? TeamDetailsViewController {
-//                    teamDetailsViewController.presenter?.team = presenter?.selectedTeam
-//                }
-//
-//            default: break
-//        }
-//
-////        if segue.destination is TertiaryViewController {
-////               let vc = segue.destination as? TertiaryViewController
-////               vc?.username = "Arthur Dent"
-////           }
-//    }
 }
 
 extension TeamsListViewController: UICollectionViewDataSource {
